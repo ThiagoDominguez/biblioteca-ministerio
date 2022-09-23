@@ -29,10 +29,13 @@
   </header>
   <main class="containerPrincipal">
     <form class="containerPrincipal_form" action="">
-      <label for="">DNI</label>
-      <input type="number" placeholder="DNI del nuevo usuario">
-      <label for="">Usuario</label>
-      <input type="text" placeholder="Nombre del nuevo usuario">
+      <label for="">DNI</label><br>
+      <input class="containerPrincipal_form--input dni" type="number" placeholder="DNI del nuevo usuario" minlength="8" maxlength="8" size="8"><br>
+      <label for="">Nombre</label><br>
+      <input class="containerPrincipal_form--input " type="text" placeholder="Nombre del nuevo usuario"><br>
+      <label for="">Apellido</label><br>
+      <input class="containerPrincipal_form--input " type="text" placeholder="Apellido del nuevo usuario"><br>
+      <button class="containerPrincipal_form--btn"> Agregar</button>
     </form>
   </main>
 </body>

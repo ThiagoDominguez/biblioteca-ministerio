@@ -62,7 +62,41 @@ main {
 
 }
 
-main form input {
-  width: 300px;
+main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid hsla(20deg, 0%, 100%, .5);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 0 hsla(2deg, 30%, 50%, .5), -2px -0 hsla(2deg, 30%, 50%, .5);
 
+}
+
+.containerPrincipal_form--input {
+  border: none;
+  margin: .5rem 0;
+  width: 500px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: hsla(20deg, 0%, 100%, .5);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.containerPrincipal_form--btn {
+  border: none;
+  padding: 1rem;
+  border-radius: .2rem;
+  background-color: hsla(90deg, 90%, 60%, .7);
+  cursor: pointer;
+}
+
+.containerPrincipal_form--btn:hover {
+  background-color: hsla(90deg, 90%, 60%, .9);
+  transition: all .5s;
 }
