@@ -94,9 +94,23 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: .2rem;
   background-color: hsla(90deg, 90%, 60%, .7);
   cursor: pointer;
+  font-weight: 600;
 }
 
 .containerPrincipal_form--btn:hover {
   background-color: hsla(90deg, 90%, 60%, .9);
   transition: all .5s;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.containerPrincipal_form--select {
+  border: none;
+  text-align: center;
+  height: 25px;
+  border-radius: .2rem;
+  background-color: hsla(20deg, 0%, 100%, .5);
 }
