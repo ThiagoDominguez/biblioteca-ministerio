@@ -1,0 +1,23 @@
+{
+  "name": "biblioteca-ministerio-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "biblioteca-bd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoDominguez/biblioteca-ministerio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoDominguez/biblioteca-ministerio/issues"
+  },
+  "homepage": "https://github.com/ThiagoDominguez/biblioteca-ministerio#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

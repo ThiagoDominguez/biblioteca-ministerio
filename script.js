@@ -26,7 +26,7 @@ class Libro {
     this._num_inv = num_inv;
     this._inicialesAutor = inicialesAutor;
     this._cod_inv = cod_inv;
-    this._id_material = Material.id_material;
+    Material.id_material = id_material;
   }
 }
 class Estado {
@@ -62,8 +62,8 @@ class Prestamo {
     fecha_devolucion
   ) {
     this._id_prestamo = id_prestamo;
-    this._id_socio = Socio.id_socio;
-    this._id_material = Material.id_material;
+    Socio.id_socio = id_socio;
+    Material.id_material = id_material;
     this._fecha_salida = fecha_salida;
     this._fecha_devolucion = fecha_devolucion;
   }
