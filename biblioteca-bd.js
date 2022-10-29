@@ -1,5 +1,5 @@
 // Configuracion de la Base de datos
-const mysql_bd = require("mysql");
+export const mysql_bd = require("mysql");
 
 const connection = mysql_bd.createConnection({
   host: "localhost",
@@ -7,7 +7,6 @@ const connection = mysql_bd.createConnection({
   password: "2001",
   database: "biblioteca",
 });
-1;
 
 // Conexion de la base de datos
 connection.connect((err) => {

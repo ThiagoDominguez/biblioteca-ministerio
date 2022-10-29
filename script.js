@@ -1,3 +1,5 @@
+import { mysql_bd } from "./biblioteca-bd";
+
 class Ejemplar {
   constructor(id_ejemplar, id_material, descripcionEjemplar, fecha) {
     this.id_ejemplar = id_ejemplar;
