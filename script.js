@@ -1,4 +1,22 @@
-import { mysql_bd } from "./biblioteca-bd";
+// DATOS DE USUARIOS
+// let usuarios = [];
+// const btnUsuario = document.getElementById("btn-usuario");
+// const inpDni = document.getElementById("inp_usuario-dni").value;
+// const inpName = document.getElementById("inp_usuario-name").value;
+// const inpLastName = document.getElementById("inp_usuario-lastname").value;
+
+// DATOS DE MATERIAL
+
+import {
+  btnMaterial,
+  idMaterial,
+  descMaterial,
+  fechaMaterial,
+} from "./material-js";
+// TODO:recuperar los datos del input
+// TODO:que el boton devuelva los datos del input
+// TODO:pasar los datos del input al diagrama de clases
+///////////////////////////////////////////////////////////////////////////////
 
 class Ejemplar {
   constructor(id_ejemplar, id_material, descripcionEjemplar, fecha) {
@@ -11,18 +29,38 @@ class Ejemplar {
 
 class Usuario {
   constructor(id_usuario, nombreUsuario, apellidoUsuario) {
+    this._id_usuario = inpDni.value;
+    this._nombreUsuario = inpName;
+    this._apellidoUsuario = inpLastName;
     this._id_usuario = id_usuario;
     this._nombreUsuario = nombreUsuario;
     this._apellidoUsuario = apellidoUsuario;
   }
 }
+
+// btnUsuario.addEventListener("click", () => {
+//   const inpDni = document.getElementById("inp_usuario-dni").value;
+//   const inpName = document.getElementById("inp_usuario-name").value;
+//   const inpLastName = document.getElementById("inp_usuario-lastname").value;
+//   const user = new Usuario(inpDni, inpName, inpLastName);
+//   usuarios.push(`DNI: ${user._id_usuario},
+
+//   Nombre: ${user._nombreUsuario},
+
+//   Apellido: ${user._apellidoUsuario}`);
+//   document.getElementById("p-return").innerHTML = usuarios;
+// });
 class Material {
   constructor(id_material, descripcionMaterial, fecha) {
+    this._id_material = idMaterial;
+    this._descripcionMaterial = descMaterial;
+    this._fecha = fechaMaterial;
     this._id_material = id_material;
     this._descripcionMaterial = descripcionMaterial;
     this._fecha = fecha;
   }
 }
+
 class Libro {
   constructor(num_inv, inicialesAutor, cod_inv, id_material) {
     this._num_inv = num_inv;

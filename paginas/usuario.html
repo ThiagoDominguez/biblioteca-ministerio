@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <title>Biblioteca</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <script src="script.js" defer></script>
-  <title>Biblioteca</title>
-</head>
-
-<body>
-  <header class="header">
-  <a href="../index.html">
-    <img class="header_img" src="https://www.mec.gob.ar/wp-content/uploads/2020/11/ctes.mec-1.png"
-      alt="imagen del Ministerio de Educacion Corrientes">
-  </a>
-    <nav class="header_nav">
-      <a class="header_nav--active" href="usuario.html">Usuario</a>
-      <a href="material.html">Material</a>
-      <a href="libro.html">Libro</a>
-      <a href="ejemplar.html">Ejemplar</a>
-      <a href="estado.html">Estado</a>
-      <a href="socio.html">Socio</a>
-      <a href="prestamo.html">Prestamo</a>
-      <a href="catalogo.html">Catalogo</a>
-    </nav>
-  </header>
-  <main class="containerPrincipal">
-    <form class="containerPrincipal_form" action="">
-      <label for="">DNI</label><br>
-      <input class="containerPrincipal_form--input dni" type="number" placeholder="DNI del nuevo usuario" minlength="8" maxlength="8" size="8"><br>
-      <label for="">Nombre</label><br>
-      <input class="containerPrincipal_form--input " type="text" placeholder="Nombre del nuevo usuario"><br>
-      <label for="">Apellido</label><br>
-      <input class="containerPrincipal_form--input " type="text" placeholder="Apellido del nuevo usuario"><br>
-      <button class="containerPrincipal_form--btn"> Agregar</button>
-    </form>
-  </main>
-</body>
-
+  <body>
+    <header class="header">
+      <a href="../index.html">
+        <img
+          class="header_img"
+          src="https://www.mec.gob.ar/wp-content/uploads/2020/11/ctes.mec-1.png"
+          alt="imagen del Ministerio de Educacion Corrientes"
+        />
+      </a>
+      <nav class="header_nav">
+        <a class="header_nav--active" href="usuario.html">Usuario</a>
+        <a href="material.html">Material</a>
+        <a href="libro.html">Libro</a>
+        <a href="ejemplar.html">Ejemplar</a>
+        <a href="estado.html">Estado</a>
+        <a href="socio.html">Socio</a>
+        <a href="prestamo.html">Prestamo</a>
+        <a href="catalogo.html">Catalogo</a>
+      </nav>
+    </header>
+    <main class="containerPrincipal">
+      <form class="containerPrincipal_form">
+        <label for="">DNI</label><br />
+        <input
+          class="containerPrincipal_form--input dni"
+          type="number"
+          name="dni"
+          placeholder="DNI del nuevo usuario"
+          minlength="8"
+          maxlength="8"
+          size="8"
+          id="inp_usuario-dni"
+        /><br />
+        <label for="">Nombre</label><br />
+        <input
+          class="containerPrincipal_form--input"
+          name="name"
+          type="text"
+          placeholder="Nombre del nuevo usuario"
+          id="inp_usuario-name"
+        /><br />
+        <label for="">Apellido</label><br />
+        <input
+          class="containerPrincipal_form--input"
+          type="text"
+          name="lastname"
+          placeholder="Apellido del nuevo usuario"
+          id="inp_usuario-lastname"
+        /><br />
+        <button
+          id="btn-usuario"
+          type="button"
+          class="containerPrincipal_form--btn"
+        >
+          Agregar
+        </button>
+      </form>
+    </main>
+    <div id="return">
+      <p id="p-return"></p>
+    </div>
+  </body>
 </html>

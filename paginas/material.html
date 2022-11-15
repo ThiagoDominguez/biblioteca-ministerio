@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../material-js" defer></script>
+    <!-- <script src="../script.js"></script> -->
+    <title>Biblioteca</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <script src="script.js" defer></script>
-  <title>Biblioteca</title>
-</head>
-
-<body>
-  <header class="header">
-    <a href="../index.html">
-      <img class="header_img" src="https://www.mec.gob.ar/wp-content/uploads/2020/11/ctes.mec-1.png"
-        alt="imagen del Ministerio de Educacion Corrientes">
-    </a>
-    <nav class="header_nav">
-      <a href="usuario.html">Usuario</a>
-      <a class="header_nav--active" href="material.html">Material</a>
-      <a href="libro.html">Libro</a>
-      <a href="ejemplar.html">Ejemplar</a>
-      <a href="estado.html">Estado</a>
-      <a href="socio.html">Socio</a>
-      <a  href="prestamo.html">Prestamo</a>
-      <a href="catalogo.html">Catalogo</a>
-    </nav>
-  </header>
+  <body>
+    <header class="header">
+      <a href="../index.html">
+        <img
+          class="header_img"
+          src="https://www.mec.gob.ar/wp-content/uploads/2020/11/ctes.mec-1.png"
+          alt="imagen del Ministerio de Educacion Corrientes"
+        />
+      </a>
+      <nav class="header_nav">
+        <a href="usuario.html">Usuario</a>
+        <a class="header_nav--active" href="material.html">Material</a>
+        <a href="libro.html">Libro</a>
+        <a href="ejemplar.html">Ejemplar</a>
+        <a href="estado.html">Estado</a>
+        <a href="socio.html">Socio</a>
+        <a href="prestamo.html">Prestamo</a>
+        <a href="catalogo.html">Catalogo</a>
+      </nav>
+    </header>
     <main class="containerPrincipal">
       <form class="containerPrincipal_form" action="">
-        <label for="">ID material</label><br>
-        <input class="containerPrincipal_form--input " type="number" placeholder="ID del material" minlength="8"
-          maxlength="8" size="8"><br>
-        <label for="">Descripcion</label><br>
-        <select class="containerPrincipal_form--select"name="" id="">
+        <label for="">ID material</label><br />
+        <input
+          id="inp_material-id"
+          class="containerPrincipal_form--input"
+          type="number"
+          placeholder="ID del material"
+          minlength="8"
+          maxlength="8"
+          size="8"
+        /><br />
+        <label for="">Descripcion</label><br />
+        <select
+          class="containerPrincipal_form--select"
+          name=""
+          id="inp_material-desc"
+        >
           <option value="" selected>--Selecciona la descripcion--</option>
-          <option value="">Copia</option>
-          <option value="">Original</option>
-        </select><br>
-        <label for="">Fecha</label><br>
-        <input class="containerPrincipal_form--input " type="date" placeholder="Apellido del nuevo usuario"><br>
-        <button class="containerPrincipal_form--btn">Agregar</button>
+          <option value="Copia">Copia</option>
+          <option value="Original">Original</option></select
+        ><br />
+        <label for="">Fecha</label><br />
+        <input
+          id="inp_material-fecha"
+          class="containerPrincipal_form--input"
+          type="date"
+          placeholder="Apellido del nuevo usuario"
+        /><br />
+        <button
+          type="button"
+          id="btn-material"
+          class="containerPrincipal_form--btn"
+        >
+          Agregar
+        </button>
       </form>
     </main>
-</body>
-
+  </body>
 </html>
