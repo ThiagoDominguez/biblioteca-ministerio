@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
-    <script src="../material-js" defer></script>
-    <!-- <script src="../script.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="../assets/libros.png" type="image/x-icon" />
+    <script type="module" src="../scripts/material.js" defer></script>
     <title>Biblioteca</title>
   </head>
 
@@ -20,14 +24,18 @@
         />
       </a>
       <nav class="header_nav">
-        <a href="usuario.html">Usuario</a>
-        <a class="header_nav--active" href="material.html">Material</a>
-        <a href="libro.html">Libro</a>
-        <a href="ejemplar.html">Ejemplar</a>
-        <a href="estado.html">Estado</a>
-        <a href="socio.html">Socio</a>
-        <a href="prestamo.html">Prestamo</a>
-        <a href="catalogo.html">Catalogo</a>
+        <a href="usuario.html"><i class="fa fa-users"></i> Usuario</a>
+        <a class="header_nav--active" href="material.html"
+          ><i class="fa fa-list"></i> Material</a
+        >
+        <a href="libro.html"><i class="fa fa-book"></i> Libro</a>
+        <a href="ejemplar.html"><i class="fa fa-save"></i> Ejemplar</a>
+        <a href="estado.html"
+          ><i class="fa fa-exclamation-circle"></i> Estado</a
+        >
+        <a href="socio.html"><i class="fa fa-user-plus"></i> Socio</a>
+        <a href="prestamo.html"><i class="fa fa-exchange"></i> Prestamo</a>
+        <a href="catalogo.html"><i class="fa fa-folder"></i> Catalogo</a>
       </nav>
     </header>
     <main class="containerPrincipal">
@@ -68,5 +76,8 @@
         </button>
       </form>
     </main>
+    <div>
+      <p id="return-material"></p>
+    </div>
   </body>
 </html>
