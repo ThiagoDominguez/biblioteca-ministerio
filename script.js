@@ -1,18 +1,22 @@
 // DATOS DE USUARIOS
-// let usuarios = [];
-// const btnUsuario = document.getElementById("btn-usuario");
-// const inpDni = document.getElementById("inp_usuario-dni").value;
-// const inpName = document.getElementById("inp_usuario-name").value;
-// const inpLastName = document.getElementById("inp_usuario-lastname").value;
+// import {
+//   usuarios,
+//   btnUsuario,
+//   inpDni,
+//   inpName,
+//   inpLastName,
+// } from "./scripts/usuario.js";
 
 // DATOS DE MATERIAL
 
-import {
-  btnMaterial,
-  idMaterial,
-  descMaterial,
-  fechaMaterial,
-} from "./material-js";
+// import {
+//   agregarMaterial,
+//   material,
+//   btnMaterial,
+//   idMaterial,
+//   descMaterial,
+//   fechaMaterial,
+// } from "./scripts/material.js";
 // TODO:recuperar los datos del input
 // TODO:que el boton devuelva los datos del input
 // TODO:pasar los datos del input al diagrama de clases
@@ -27,29 +31,6 @@ class Ejemplar {
   }
 }
 
-class Usuario {
-  constructor(id_usuario, nombreUsuario, apellidoUsuario) {
-    this._id_usuario = inpDni.value;
-    this._nombreUsuario = inpName;
-    this._apellidoUsuario = inpLastName;
-    this._id_usuario = id_usuario;
-    this._nombreUsuario = nombreUsuario;
-    this._apellidoUsuario = apellidoUsuario;
-  }
-}
-
-// btnUsuario.addEventListener("click", () => {
-//   const inpDni = document.getElementById("inp_usuario-dni").value;
-//   const inpName = document.getElementById("inp_usuario-name").value;
-//   const inpLastName = document.getElementById("inp_usuario-lastname").value;
-//   const user = new Usuario(inpDni, inpName, inpLastName);
-//   usuarios.push(`DNI: ${user._id_usuario},
-
-//   Nombre: ${user._nombreUsuario},
-
-//   Apellido: ${user._apellidoUsuario}`);
-//   document.getElementById("p-return").innerHTML = usuarios;
-// });
 class Material {
   constructor(id_material, descripcionMaterial, fecha) {
     this._id_material = idMaterial;
