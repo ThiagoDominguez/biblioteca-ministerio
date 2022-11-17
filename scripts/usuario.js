@@ -1,3 +1,23 @@
+window.onload = () => {
+  const mysql = require("mysql");
+};
+
+function insertUsuario(connection, datos, callback) {
+  let insertQuery =
+    "INSERT INTO usuario(id_usuario,nombre,apellido) VALUES(?,?,?)";
+  let query = mysql.format(insertQuery, [
+    datos.id_usuario,
+    datos.nombre,
+    datos.apellido,
+  ]);
+  connection.query(query, function (err, result) {
+    if (err) throw err;
+    callback(result);
+  });
+}
+// module.exports = { insertUsuario };
+
+///////////////////////////////////////////
 let usuarios = [];
 const btnUsuario = document.getElementById("btn-usuario");
 const inpDni = document.getElementById("inp_usuario-dni").value;
@@ -28,4 +48,5 @@ btnUsuario.addEventListener("click", () => {
   document.getElementById("p-return").innerHTML = usuarios;
 });
 
+// exports.module = { insertUsuario };
 // export { usuarios, btnUsuario, inpDni, inpName, inpLastName };
