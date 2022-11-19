@@ -1,10 +1,4 @@
-// // import {
-// //   insertUsuario,
-// //   inpDni,
-// //   inpName,
-// //   inpLastName,
-// // } from "./scripts/usuario.js";
-// // Configuracion servidor
+// Configuracion servidor
 const express = require("express");
 
 const app = express();
@@ -18,7 +12,7 @@ app.get("/", (req, res) => {
 app.get("/insertUsuario", (req, res) => {
   insertUsuario(
     connection,
-    { id_usuario: 43539795, nombre: "Thiago Demian", apellido: "Dominguez" },
+    { id_usuario: 22270933, nombre: "Claudio Javier", apellido: "Dominguez" },
     (result) => {
       res.json(result);
     }
@@ -36,6 +30,7 @@ app.listen(3000, () => {
 
 // // Configuracion de la Base de datos
 const mysql = require("mysql");
+// const { inpDni, inpName, inpLastName } = require("./scripts/usuario");
 
 const connection = mysql.createConnection({
   host: "localhost",
