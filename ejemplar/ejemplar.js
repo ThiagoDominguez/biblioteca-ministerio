@@ -1,21 +1,21 @@
-const ejemplares = [];
-const btnEjemplar = document.getElementById("btn-ejemplar");
-const inpEjemplarIdEstado = document.getElementById("inp_ejemplar-idEstado");
-const inpEjemplarDesc = document.getElementById("inp_ejemplar-desc");
-const inpEjemplarCodMat = document.getElementById(
-  "inp_ejemplar-codigoMaterial"
-);
+document
+  .getElementById("form_ejemplar")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    let formulario = document.getElementById("form_ejemplar");
+    let formEjemplar = new FormData(formulario);
 
-btnEjemplar.addEventListener("click", () => {
-  const inpEjemplarIdEstado = document.getElementById(
-    "inp_ejemplar-idEstado"
-  ).value;
-  const inpEjemplarDesc = document.getElementById("inp_ejemplar-desc").value;
-  const inpEjemplarCodMat = document.getElementById(
-    "inp_ejemplar-codigoMaterial"
-  ).value;
-  ejemplares.push(
-    `<li> ID estado: ${inpEjemplarIdEstado} Descripción: ${inpEjemplarDesc} Código material: ${inpEjemplarCodMat} </li>`
-  );
-  document.getElementById("return-ejemplar").innerHTML = ejemplares;
-});
+    fetch("regEjem.php", {
+      method: "POST",
+      body: formEjemplar,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data == "true") {
+          document.getElementById("inp_ejemplar-idEstado").value = "";
+          document.getElementById("inp_ejemplar-desc").value = "";
+          document.getElementById("inp_ejemplar-codigoMaterial").value = "";
+          alert("Ejemplar añadido");
+        } else console.log(data);
+      });
+  });

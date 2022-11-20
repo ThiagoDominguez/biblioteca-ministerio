@@ -1,7 +1,7 @@
 <?php
 
 $inpLibroNumInventario = $_POST["inp_libro-numeroInventario"];
-$inpLibroInicialesAutor = $_POST["inp_libro-inicialesAutor"];
+$inpLibroInicialesAutor = $_POST["inp_libro-autor"];
 
 $inpLibroCodInventario = $_POST["inp_libro-codigoInventario"];
 
