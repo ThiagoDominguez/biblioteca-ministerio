@@ -17,9 +17,6 @@
 //   descMaterial,
 //   fechaMaterial,
 // } from "./scripts/material.js";
-// TODO:recuperar los datos del input
-// TODO:que el boton devuelva los datos del input
-// TODO:pasar los datos del input al diagrama de clases
 ///////////////////////////////////////////////////////////////////////////////
 
 class Ejemplar {

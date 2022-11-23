@@ -2,7 +2,7 @@ document.getElementById("form_estado").addEventListener("submit", function (e) {
   e.preventDefault();
   let formulario = document.getElementById("form_estado");
   let formEstado = new FormData(formulario);
-
+  let resultado;
   fetch("regEst.php", {
     method: "POST",
     body: formEstado,
@@ -14,6 +14,8 @@ document.getElementById("form_estado").addEventListener("submit", function (e) {
         document.getElementById("inp_estado-desc").value = "";
         document.getElementById("inp_estado-codigoMaterial").value = "";
         alert("Estado agregado");
-      } else console.log();
+      } else {
+        console.log(data);
+      }
     });
 });
