@@ -25,7 +25,7 @@
       <a href="../estado/estado.php"><i class="fa fa-exclamation-circle"></i> Estado</a>
       <a href="../socio/socio.html"><i class="fa fa-user-plus"></i> Socio</a>
       <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
-      <a href="../paginas/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
+      <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
   </header>
   <main class="containerPrincipal">

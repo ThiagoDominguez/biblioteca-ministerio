@@ -41,12 +41,10 @@
   $queryEstado = mysqli_query($connect, "SELECT descripcion FROM estado");
   $queryEjemplar = mysqli_query($connect, "SELECT stock FROM ejemplar ");
   if ($queryLibro or $querySocio or $queryEjemplar or $queryEstado) {
-    while ($row = $queryLibro->fetch_array() or $row = $queryEjemplar->fetch_array() or $row = $queryEstado->fetch_array() or $row = $querySocio->fetch_array()) {
+    while ($row = $queryLibro->fetch_array()) {
       $tituloLib = $row["titulo"];
       $autorLib = $row["iniciales_autor"];
-      $dniSoc = $row["dni"];
-      $descEst = $row["descripcion"];
-      $stockEje = $row["stock"];
+
   ?>
   <div class="main_table-catalogo">
     <tr class="tr-catalogo">
@@ -58,7 +56,7 @@
     </tr>
     <tr class="tr-catalogo">
       <td class="td-catalogo">
-        <?php echo $dniSoc ?>
+        <?php #echo $dniSoc ?>
       </td>
       <td class="td-catalogo">
         <?php echo $tituloLib ?>
@@ -67,10 +65,10 @@
         <?php echo $autorLib ?>
       </td>
       <td class="td-catalogo">
-        <?php echo $descEst ?>
+        <?php #echo $descEst ?>
       </td>
       <td class="td-catalogo">
-        <?php echo $stockEje ?>
+        <?php #echo $stockEje ?>
       </td>
       <td class="td-catalogo"></td>
       <td class="td-catalogo"></td>

@@ -19,14 +19,14 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <a href="../usuario/usuario.html"><i class="fa fa-users"></i> Usuario</a>
-      <a href="../material/material.html"><i class="fa fa-list"></i> Material</a>
-      <a href="../libro/libro.html"><i class="fa fa-book"></i> Libro</a>
-      <a href="../ejemplar/ejemplar.html"><i class="fa fa-save"></i> Ejemplar</a>
+      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
+      <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
+      <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
+      <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
       <a class="header_nav--active" href="../estado/estado.php"><i class="fa fa-exclamation-circle"></i> Estado</a>
-      <a href="../socio/socio.html"><i class="fa fa-user-plus"></i> Socio</a>
-      <a href="../prestamo/prestamo.html"><i class="fa fa-exchange"></i> Prestamo</a>
-      <a href="../catalogo/catalogo.html"><i class="fa fa-folder"></i> Catalogo</a>
+      <a href="../socio/socio.php"><i class="fa fa-user-plus"></i> Socio</a>
+      <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
+      <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
   </header>
   <main class="containerPrincipal">
