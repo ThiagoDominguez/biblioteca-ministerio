@@ -27,7 +27,7 @@
       <a href="../estado/estado.php"><i class="fa fa-exclamation-circle"></i> Estado</a>
       <a href="../socio/socio.php"><i class="fa fa-user-plus"></i> Socio</a>
       <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
-      <a href="../catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
+      <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
   </header>
   <main class="containerPrincipal">
@@ -84,7 +84,7 @@
           <?php echo $matFecha ?>
         </td>
         <td class="td-material" style="width:10px">
-          <button class="fa fa-ban" class="btn-MaterialDelete" id="btn-MaterialDelete" name="btn-MaterialDelete"
+          <button class="fa fa-ban" class="btn-materialDelete" id="btn-materialDelete" name="btn-materialDelete"
             style="background-color:transparent;border:none; cursor: pointer;" onclick=""></button>
         </td>
       </tr>

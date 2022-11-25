@@ -15,6 +15,7 @@ document
           document.getElementById("inp_ejemplar-idEstado").value = "";
           document.getElementById("inp_ejemplar-desc").value = "";
           document.getElementById("inp_ejemplar-codigoMaterial").value = "";
+          document.getElementById("inp_ejemplar-stock").value = "";
           alert("Ejemplar añadido");
         } else console.log(data);
       });

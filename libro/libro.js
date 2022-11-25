@@ -10,6 +10,7 @@ document.getElementById("form_libro").addEventListener("submit", function (e) {
     .then((res) => res.json())
     .then((data) => {
       if (data == "true") {
+        document.getElementById("inp_libro-titulo").value = "";
         document.getElementById("inp_libro-autor").value = "";
         document.getElementById("inp_libro-numeroInventario").value = "";
         document.getElementById("inp_libro-codigoInventario").value = "";

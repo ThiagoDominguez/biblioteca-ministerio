@@ -39,6 +39,9 @@
       <label for="">Codigo material</label><br />
       <input class="containerPrincipal_form--input" type="number" name="inp_ejemplar-codigoMaterial"
         placeholder="Codigo de material" id="inp_ejemplar-codigoMaterial" /><br />
+      <label for="">Stock</label><br />
+      <input class="containerPrincipal_form--input" type="number" name="inp_ejemplar-stock"
+        placeholder="Cantidad en Stock" id="inp_ejemplar-stock" /><br />
       <button id="btn-ejemplar" type="submit" class="containerPrincipal_form--btn">
         Agregar
       </button>
@@ -59,6 +62,7 @@
       $idEstado = $row["id_estado"];
       $estadoDesc = $row["descripcion"];
       $estadoCodMat = $row["cod_material"];
+      $stock = $row["stock"];
   ?>
   <div class="main_table-ejemplar">
     <table class="table-ejemplar">
@@ -68,6 +72,7 @@
         <th class="th-ejemplar">ID estado</th>
         <th class="th-ejemplar">Descripcion</th>
         <th class="th-ejemplar">Codigo material</th>
+        <th class="th-ejemplar">Stock</th>
       </tr>
       <tr class="tr-ejemplar">
         <td class="td-ejemplar" style="width:10px">
@@ -78,6 +83,9 @@
         </td>
         <td class="td-ejemplar" style="width:10px">
           <?php echo $estadoCodMat ?>
+        </td>
+        <td class="td-ejemplar" style="width:10px">
+          <?php echo $stock ?>
         </td>
         <td class="td-ejemplar" style="width:10px"><button class="fa fa-ban" class="btn-EjemplarDelete"
             id="btn-EjemplarDelete" name="btn-EjemplarDelete"

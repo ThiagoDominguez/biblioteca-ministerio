@@ -2,7 +2,7 @@
 
 $inpLibroNumInventario = $_POST["inp_libro-numeroInventario"];
 $inpLibroInicialesAutor = $_POST["inp_libro-autor"];
-
+$inpLibroTitulo = $_POST["inp_libro-titulo"];
 $inpLibroCodInventario = $_POST["inp_libro-codigoInventario"];
 
 $inpLibroCodMat = $_POST["inp_libro-codigoMaterial"];
@@ -13,12 +13,13 @@ try {
   $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
   $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
-  $pdo = $conexion->prepare("INSERT INTO libro VALUES(?,?,?,?)");
+  $pdo = $conexion->prepare("INSERT INTO libro VALUES(?,?,?,?,?)");
 
   $pdo->bindParam(1, $inpLibroNumInventario);
-  $pdo->bindParam(2, $inpLibroInicialesAutor);
-  $pdo->bindParam(3, $inpLibroCodInventario);
-  $pdo->bindParam(4, $inpLibroCodMat);
+  $pdo->bindParam(2, $inpLibroTitulo);
+  $pdo->bindParam(3, $inpLibroInicialesAutor);
+  $pdo->bindParam(4, $inpLibroCodInventario);
+  $pdo->bindParam(5, $inpLibroCodMat);
   $pdo->execute() or die(print($pdo->errorInfo()));
   echo json_encode("true");
 } catch (PDOException $error) {
