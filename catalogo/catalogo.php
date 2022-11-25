@@ -18,7 +18,8 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
+      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
+      <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
       <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>

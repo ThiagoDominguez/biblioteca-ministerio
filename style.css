@@ -15,7 +15,6 @@ body {
   margin-top: -2rem;
 }
 
-
 .header_nav {
   background-color: black;
   width: 100%;
@@ -25,7 +24,6 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: center;
-
 }
 
 .header_nav a {
@@ -36,7 +34,6 @@ body {
   padding: 1rem 1rem;
   font-size: 16px;
   font-weight: bold;
-
 }
 
 .header_nav a:hover {
@@ -52,56 +49,65 @@ body {
   max-width: 200px;
   width: 100%;
   margin-bottom: 1rem;
-
-
-
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 main form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 3px solid hsla(20deg, 0%, 100%, .5);
+  border: 3px solid hsla(20deg, 0%, 100%, 0.5);
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 2px 0 hsla(2deg, 30%, 50%, .5), -2px -0 hsla(2deg, 30%, 50%, .5);
-
+  box-shadow: 2px 0 hsla(2deg, 30%, 50%, 0.5), -2px -0 hsla(2deg, 30%, 50%, 0.5);
 }
 
 .containerPrincipal_form--input {
   border: none;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   width: 500px;
   height: 25px;
   border-radius: 5px;
-  background-color: hsla(20deg, 0%, 100%, .5);
+  background-color: hsla(20deg, 0%, 100%, 0.5);
 }
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+.containerPrincipal-parrafo {
+  text-align: center;
+}
+.containerPrincipal-link {
+  text-align: center;
+}
+.table-estado {
+  width: 100%;
+}
+table,
+tr,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px #252525 solid;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
 .containerPrincipal_form--btn {
   border: none;
   padding: 1rem;
-  border-radius: .2rem;
-  background-color: hsla(90deg, 90%, 60%, .7);
+  border-radius: 0.2rem;
+  background-color: hsla(90deg, 90%, 60%, 0.7);
   cursor: pointer;
   font-weight: 600;
 }
 
 .containerPrincipal_form--btn:hover {
-  background-color: hsla(90deg, 90%, 60%, .9);
-  transition: all .5s;
+  background-color: hsla(90deg, 90%, 60%, 0.9);
+  transition: all 0.5s;
 }
 
 form label {
@@ -113,7 +119,70 @@ form label {
   border: none;
   text-align: center;
   height: 25px;
-  border-radius: .2rem;
-  background-color: hsla(20deg, 0%, 100%, .5);
+  border-radius: 0.2rem;
+  background-color: hsla(20deg, 0%, 100%, 0.5);
+}
 
+.error-login {
+  background-color: rgb(242, 84, 84);
+  color: #252525;
+  padding: 1rem;
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+.success-registro {
+  background-color: rgb(94, 236, 94);
+  color: #252525;
+  padding: 1rem;
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+.main_table-libro {
+  width: 100%;
+}
+
+.table-libro,
+.tr-libro,
+.th-libro,
+.td-libro {
+  border-collapse: collapse;
+  border: 1px rgba(10, 10, 10, 0.4) solid;
+}
+
+.table-libro,
+.th-libro,
+.td-libro {
+  text-align: center;
+}
+
+.table-libro {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.btn-libroDelete,
+.btn-libroEdit {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-libroDelete:hover {
+  background-color: red;
+}
+
+.btn-libroEdit:hover {
+  background-color: green;
+}
+
+.td-libro {
+  background-color: rgb(77, 245, 241);
 }

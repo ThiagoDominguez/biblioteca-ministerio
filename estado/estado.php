@@ -19,7 +19,8 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
+      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
+      <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
       <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
@@ -106,9 +107,14 @@
           style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;  background-color: rgb(77, 245, 241);">
           <?php echo $codMatEstado; ?>
         </td>
-        <td>
-          <button class="fa fa-ban " id="btn-EstadoDelete" name="btn-EstadoDelete"
-            style="background-color:transparent;border:none; cursor: pointer;" onclick=""></button>
+        <td class="td-estado" style="width:10px">
+          <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
+            name="btn-libroDelete"></a>
+        </td>
+
+        <td class="td-estado" style="width:10px">
+          <a href="../editEst.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-pencil btn-libroEdit"
+            id="btn-libroEdit" name="btn-libroEdit"></a>
         </td>
       </tr>
 

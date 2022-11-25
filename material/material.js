@@ -17,5 +17,6 @@ document
           document.getElementById("inp_material-fecha").value = "";
           alert("Material añadido");
         } else console.log(data);
+        alert(data);
       });
   });

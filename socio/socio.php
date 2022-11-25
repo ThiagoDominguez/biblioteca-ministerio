@@ -18,7 +18,8 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
+      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
+      <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
       <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
@@ -132,9 +133,13 @@
         <td class=" td-socio" style="width:20px">
           <?php echo $condicionSocio ?>
         </td>
-        <td class="td-socio">
-          <button class="fa fa-ban" class="btn-SocioDelete" id="btn-SocioDelete" name="btn-SocioDelete"
-            style="background-color:transparent;border:none; cursor: pointer;" onclick=""></button>
+        <td class="td-socio" style="width:10px">
+          <a href="delete.php?id=<?php echo $row["idestudiante"] ?>" class="fa fa-ban btn-libroDelete"
+            id="btn-libroDelete" name="btn-libroDelete"></a>
+        </td>
+        <td class="td-socio" style="width:10px">
+          <a href="../editSoc.php?id=<?php echo $row["idestudiante"] ?>" class="fa fa-pencil btn-libroEdit"
+            id="btn-libroEdit" name="btn-libroEdit"></a>
         </td>
       </tr>
     </table>

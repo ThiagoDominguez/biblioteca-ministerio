@@ -18,7 +18,8 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
+      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
+      <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
       <a class="header_nav--active" href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
@@ -87,9 +88,14 @@
         <td class="td-ejemplar" style="width:10px">
           <?php echo $stock ?>
         </td>
-        <td class="td-ejemplar" style="width:10px"><button class="fa fa-ban" class="btn-EjemplarDelete"
-            id="btn-EjemplarDelete" name="btn-EjemplarDelete"
-            style="background-color:transparent;border:none; cursor: pointer;" onclick=""></button></td>
+        <td class="td-ejemplar" style="width:10px">
+          <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
+            name="btn-libroDelete"></a>
+        </td>
+        <td class="td-ejemplar" style="width:10px">
+          <a href="../editEjem.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-pencil btn-libroEdit"
+            id="btn-libroEdit" name="btn-libroEdit"></a>
+        </td>
       </tr>
     </table>
     <style>

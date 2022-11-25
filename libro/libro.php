@@ -18,7 +18,8 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
+      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
+      <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a class="header_nav--active" href="libro.php"><i class="fa fa-book"></i> Libro</a>
       <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
@@ -95,10 +96,12 @@
           <?php echo $codMat ?>
         </td>
         <td class="td-libro" style="width:10px">
-          <button class="fa fa-ban btn-libroDelete" id="btn-libroDelete" name="btn-libroDelete" onclick=""></button>
+          <a href="delete.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-ban btn-libroDelete"
+            id="btn-libroDelete" name="btn-libroDelete"></a>
         </td>
         <td class="td-libro" style="width:10px">
-          <button class="fa fa-pencil btn-libroEdit" id="btn-libroEdit" name="btn-libroEdit" onclick=""></button>
+          <a href="../editLib.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-pencil btn-libroEdit"
+            id="btn-libroEdit" name="btn-libroEdit"></a>
         </td>
       </tr>
     </table>
@@ -136,11 +139,14 @@
       border: none;
       cursor: pointer;
       width: 100%;
-      margin: 0
+      margin: 0;
+      text-decoration: none;
+      color: black;
     }
 
     .btn-libroDelete:hover {
       background-color: red;
+
     }
 
     .btn-libroEdit:hover {

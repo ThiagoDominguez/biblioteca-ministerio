@@ -5,7 +5,7 @@
   "main": "biblioteca-bd.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node biblioteca-bd.js",
+    "start": "node estado.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon biblioteca-bd.js"
   },
