@@ -16,7 +16,16 @@ document
           document.getElementById("inp_material-desc").value = "";
           document.getElementById("inp_material-fecha").value = "";
           alert("Material añadido");
-        } else console.log(data);
-        alert(data);
+        } else if (data != "true") {
+          alert("Entrada duplicada");
+        }
       });
   });
+function matConfirm() {
+  let result = confirm("¿Estas seguro de eliminar este registro?");
+  if (result) {
+    return true;
+  } else {
+    return false;
+  }
+}

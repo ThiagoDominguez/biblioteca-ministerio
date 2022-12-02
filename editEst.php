@@ -70,7 +70,7 @@ $fila = mysqli_fetch_array($queryEdit);
     </form>
   </main>
 
-  <!-- TODO: mandar datos del select * from al front -->
+
 
 </body>
 

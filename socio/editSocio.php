@@ -7,7 +7,7 @@ $pass = "2001";
 $connect = mysqli_connect($hostname, $nombreUsuario, $pass, $bd);
 
 
-$id = $_POST["inp_socio-cod"];
+$id = $_POST["inp_socio-idEstudiante"];
 $dni = $_POST["inp_socio-dni"];
 $nombre = $_POST["inp_socio-name"];
 $apellido = $_POST["inp_socio-lastname"];
@@ -26,7 +26,9 @@ $query = mysqli_query($connect, $sqlEdit);
 
 
 if ($query) {
+
   header("Location:socio.php");
+  header("Location:socio.php?success= Registro editado ID: $id");
 }
 
 ?>

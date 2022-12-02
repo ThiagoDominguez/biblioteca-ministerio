@@ -7,12 +7,22 @@ $connect = mysqli_connect($hostname, $nombreUsuario, $pass, $bd);
 
 
 $id = $_REQUEST["id"];
+
+
 $sql = "DELETE FROM estudiante WHERE idestudiante = '$id'";
 $query = mysqli_query($connect, $sql);
+
+
+
+
 
 if ($query) {
   header("Location: socio.php");
 }
+
+
+
+
 
 
 

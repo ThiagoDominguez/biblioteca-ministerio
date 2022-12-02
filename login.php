@@ -14,7 +14,6 @@ if (isset($_POST["inp_inicioSesion-email"]) && isset($_POST["inp_inicioSesion-pa
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
-
     return $data;
   }
 

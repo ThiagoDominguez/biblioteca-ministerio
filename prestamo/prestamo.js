@@ -17,7 +17,16 @@ document
           document.getElementById("inp_prestamo-idMaterial").value = "";
           document.getElementById("inp_prestamo-fechaSalida").value = "";
           document.getElementById("inp_prestamo-fechaDevolucion").value = "";
-          alert("Prestamo añadido", data);
+          alert("Prestamo añadido");
         } else console.log(data);
       });
   });
+
+function presConfirm() {
+  let result = confirm("¿Estas seguro de eliminar este registro?");
+  if (result) {
+    return true;
+  } else {
+    return false;
+  }
+}

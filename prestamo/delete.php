@@ -12,6 +12,9 @@ $query = mysqli_query($connect, $sql);
 
 if ($query) {
   header("Location: prestamo.php");
+  header("Location:prestamo.php?error= Registro eliminado, ID: $id");
+
+
 }
 
 

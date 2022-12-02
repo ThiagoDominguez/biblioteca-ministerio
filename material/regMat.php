@@ -18,6 +18,8 @@ try {
 
   echo json_encode("true");
 
+
+
 } catch (PDOException $error) {
   echo $error->getMessage();
   die();

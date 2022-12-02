@@ -29,11 +29,29 @@
       <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
   </header>
+  <?php
+  if (isset($_GET["success"])) {
+  ?>
+  <p class="success-registro">
+    <?php echo $_GET["success"] ?>
+  </p>
+  <?php
+  }
+  if (isset($_GET["error"])) {
+  ?>
+
+  <p class="error-login">
+    <?php echo $_GET["error"] ?>
+  </p>
+  <?php
+  }
+
+  ?>
   <main class="containerPrincipal">
     <form class="containerPrincipal_form" method="post" id="form_prestamo">
       <label for="">ID prestamo</label>
       <input required id="inp_prestamo-id" name="inp_prestamo-id" type="number" placeholder="ID del Prestamo"
-        class="containerPrincipal_form--input" />
+        class="containerPrincipal_form--input" readonly />
       <label for="">DNI</label><br />
       <input required id="inp_prestamo-dni" name="inp_prestamo-dni" class="containerPrincipal_form--input dni"
         type="number" placeholder="DNI del socio" maxlength="8" /><br />
@@ -96,7 +114,7 @@
         </td>
         <td class="td-prestamo" style="width:10px">
           <a href="delete.php?id=<?php echo $row["id_prestamo"] ?>" class="fa fa-ban btn-libroDelete"
-            id="btn-libroDelete" name="btn-libroDelete"></a>
+            id="btn-libroDelete" name="btn-libroDelete" onclick="return presConfirm()"></a>
         </td>
         <td class="td-prestamo" style="width:10px">
           <a href="../editPres.php?id=<?php echo $row["id_prestamo"] ?>" class="fa fa-pencil btn-libroEdit"

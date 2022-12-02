@@ -53,7 +53,8 @@ $fila = mysqli_fetch_array($queryEdit);
     <form class="containerPrincipal_form" method="post" id="form_material" action="./material/editMaterial.php">
       <label for="">ID material</label><br />
       <input required id="inp_material-id" name="inp_material-id" class="containerPrincipal_form--input" type="number"
-        readonly placeholder="ID del material" minlength="8" maxlength="8" size="8" /><br />
+        readonly placeholder="ID del material" minlength="8" maxlength="8" size="8"
+        value="<?php echo $fila["id_material"] ?>" /><br />
       <label for="">Descripcion</label><br />
       <select required class="containerPrincipal_form--select" name="inp_material-desc" id="inp_material-desc"
         value="<?php echo $fila["descripcion"] ?>">

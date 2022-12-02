@@ -48,10 +48,10 @@ $fila = mysqli_fetch_array($queryEdit);
   </header>
   <main class="containerPrincipal">
     <form class="containerPrincipal_form" id="form_socio" method="post" action="./socio/editSocio.php">
-      <label for="">Codigo</label><br />
-      <input id="inp_socio-cod" required class="containerPrincipal_form--input dni" type="number"
-        placeholder="Codigo del  socio" minlength="8" maxlength="8" size="8" name="inp_socio-cod" readonly
-        value="<?php echo $fila["codigo"] ?>" /><br />
+      <label for="">ID del Socio</label><br />
+      <input id="inp_socio-idEstudiante" required class="containerPrincipal_form--input dni" type="number"
+        placeholder="ID del Socio" minlength="8" maxlength="8" size="8" name="inp_socio-idEstudiante" readonly
+        value="<?php echo $fila["idestudiante"] ?>" /><br />
       <label for="">DNI</label><br />
       <input id="inp_socio-dni" required class="containerPrincipal_form--input dni" type="number"
         placeholder="DNI del  socio" minlength="8" maxlength="8" size="8" name="inp_socio-dni"
@@ -75,9 +75,15 @@ $fila = mysqli_fetch_array($queryEdit);
       <input id="inp_socio-email" required class="containerPrincipal_form--input" type="email" name="inp_socio-email"
         placeholder="Email del socio" value="<?php echo $fila["email"] ?>" />
       <label for="">Condicion</label><br />
-      <input id="inp_socio-condicion" required class="containerPrincipal_form--input" type="text"
-        name="inp_socio-condicion" placeholder="Condicion del socio" value="<?php echo $fila["condicion"] ?>" />
-      <button id="btn-socio" type="submit" class="containerPrincipal_form--btn">
+      <select name="inp_socio-condicion" required id="inp_socio-condicion" class="containerPrincipal_form--select"
+        value="<?php echo $fila["condicion"] ?>">
+        <option value="" selected>--Seleccione Condicion--</option>
+        <option value="Habilitado">Habilitado</option>
+        <option value="Deshabilitado">Deshabilitado</option>
+      </select>
+      <!-- <input id="inp_socio-condicion" required class="containerPrincipal_form--input" type="text"
+        name="inp_socio-condicion" placeholder="Condicion del socio" value="<?php echo $fila["condicion"] ?>" /> -->
+      <button id="btn-socio" type="submit" class="containerPrincipal_form--btn" style="margin-top: 10px">
         Editar
       </button>
     </form>

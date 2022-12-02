@@ -9,7 +9,6 @@ document.getElementById("form_socio").addEventListener("submit", function (e) {
     .then((res) => res.json())
     .then((data) => {
       if (data == "true") {
-        document.getElementById("inp_socio-cod").value = "";
         document.getElementById("inp_socio-dni").value = "";
         document.getElementById("inp_socio-name").value = "";
         document.getElementById("inp_socio-lastname").value = "";
@@ -19,6 +18,16 @@ document.getElementById("form_socio").addEventListener("submit", function (e) {
         document.getElementById("inp_socio-condicion").value = "";
         document.getElementById("inp_socio-carrera").value = "";
         alert("Socio añadido");
-      } else console.log(data);
+      } else {
+        console.log(data);
+      }
     });
 });
+function confirm() {
+  let result = confirm("¿Estas seguro de eliminar este registro?");
+  if (result) {
+    return true;
+  } else {
+    return false;
+  }
+}

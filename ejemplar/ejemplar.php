@@ -90,7 +90,7 @@
         </td>
         <td class="td-ejemplar" style="width:10px">
           <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
-            name="btn-libroDelete"></a>
+            name="btn-libroDelete" onclick="return confirm('¿Estas seguro de eliminar este registro?')"></a>
         </td>
         <td class="td-ejemplar" style="width:10px">
           <a href="../editEjem.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-pencil btn-libroEdit"

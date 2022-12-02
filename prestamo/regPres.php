@@ -17,6 +17,10 @@ try {
   $pdo->bindParam(4, $fechaSalidaPrestamo);
   $pdo->bindParam(5, $fechaDevolucionPrestamo);
   $pdo->execute() or die(print($pdo->errorInfo()));
+  if ($pdo) {
+    header("Location:prestamo.php");
+    header("Location:prestamo.php?success=Prestamo realizado correctamente");
+  }
 
   echo json_encode("true");
 } catch (PDOException $error) {

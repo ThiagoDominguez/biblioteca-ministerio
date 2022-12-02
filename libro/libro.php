@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
   <link rel="shortcut icon" href="../assets/libros.png" type="image/x-icon" />
-  <script src="libro.js" defer></script>
+  <script type="module" src="libro.js" defer></script>
   <title>Biblioteca</title>
 </head>
 
@@ -97,7 +97,8 @@
         </td>
         <td class="td-libro" style="width:10px">
           <a href="delete.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-ban btn-libroDelete"
-            id="btn-libroDelete" name="btn-libroDelete"></a>
+            id="btn-libroDelete" name="btn-libroDelete"
+            onclick="return  confirm('¿Estas seguro de eliminar este registro?')"></a>
         </td>
         <td class="td-libro" style="width:10px">
           <a href="../editLib.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-pencil btn-libroEdit"

@@ -12,7 +12,7 @@ $descripcion = $_POST["inp_material-desc"];
 $fecha = $_POST["inp_material-fecha"];
 
 
-$sqlEdit = "UPDATE material SET descripcion='$$descripcion',fecha='$fecha'WHERE id_material='$id'";
+$sqlEdit = "UPDATE material SET descripcion='$descripcion',fecha='$fecha'WHERE id_material='$id'";
 
 
 $query = mysqli_query($connect, $sqlEdit);

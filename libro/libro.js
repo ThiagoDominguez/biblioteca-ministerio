@@ -19,3 +19,12 @@ document.getElementById("form_libro").addEventListener("submit", function (e) {
       } else console.log(data);
     });
 });
+
+function libConfirm() {
+  let result = confirm("¿Estas seguro de eliminar este registro?");
+  if (result) {
+    return true;
+  } else {
+    return false;
+  }
+}

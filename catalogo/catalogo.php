@@ -37,16 +37,20 @@
   $nombreUsuario = "Thiago";
   $pass = "2001";
   $connect = mysqli_connect($hostname, $nombreUsuario, $pass, $bd);
-  $queryLibro = mysqli_query($connect, "SELECT titulo,iniciales_autor FROM libro ");
-  $querySocio = mysqli_query($connect, "SELECT dni FROM estudiante");
-  $queryEstado = mysqli_query($connect, "SELECT descripcion FROM estado");
-  $queryEjemplar = mysqli_query($connect, "SELECT stock FROM ejemplar ");
+  $queryLibro = mysqli_query($connect, "SELECT libro.titulo,libro.iniciales_autor FROM libro ");
+  $querySocio = mysqli_query($connect, "SELECT estudiante.dni FROM estudiante");
+  $queryEstado = mysqli_query($connect, "SELECT estado.descripcion FROM estado");
+  $queryEjemplar = mysqli_query($connect, "SELECT ejemplar.stock FROM ejemplar ");
   if ($queryLibro or $querySocio or $queryEjemplar or $queryEstado) {
-    while ($row = $queryLibro->fetch_array()) {
+    while ($row = $queryLibro->fetch_array() or $row = $querySocio->fetch_array() or $row = $queryEstado->fetch_all() or $row = $queryEjemplar->fetch_all()) {
       $tituloLib = $row["titulo"];
       $autorLib = $row["iniciales_autor"];
+      $dniSoc = $row["estudiante" . "dni"];
+      $descEst = $row["descripcion"];
+      $stockEje = $row["stock"];
 
   ?>
+
   <div class="main_table-catalogo">
     <tr class="tr-catalogo">
       <th class="th-catalogo">Socio</th>
@@ -57,7 +61,7 @@
     </tr>
     <tr class="tr-catalogo">
       <td class="td-catalogo">
-        <?php #echo $dniSoc ?>
+        <?php echo $dniSoc ?>
       </td>
       <td class="td-catalogo">
         <?php echo $tituloLib ?>
@@ -66,13 +70,11 @@
         <?php echo $autorLib ?>
       </td>
       <td class="td-catalogo">
-        <?php #echo $descEst ?>
+        <?php echo $descEst ?>
       </td>
       <td class="td-catalogo">
-        <?php #echo $stockEje ?>
+        <?php echo $stockEje ?>
       </td>
-      <td class="td-catalogo"></td>
-      <td class="td-catalogo"></td>
     </tr>
   </div>
   <style>

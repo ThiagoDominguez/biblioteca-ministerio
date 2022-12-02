@@ -87,7 +87,7 @@
         </td>
         <td class="td-material" style="width:10px">
           <a href="delete.php?id=<?php echo $row["id_material"] ?>" class="fa fa-ban btn-libroDelete"
-            id="btn-libroDelete" name="btn-libroDelete"></a>
+            id="btn-libroDelete" name="btn-libroDelete" onclick="return matConfirm()"></a>
         </td>
         <td class="td-material" style="width:10px">
           <a href="../editMat.php?id=<?php echo $row["id_material"] ?>" class="fa fa-pencil btn-libroEdit"

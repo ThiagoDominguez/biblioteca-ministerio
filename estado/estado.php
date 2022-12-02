@@ -109,7 +109,7 @@
         </td>
         <td class="td-estado" style="width:10px">
           <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
-            name="btn-libroDelete"></a>
+            name="btn-libroDelete" onclick="return confirm('¿Estas seguro de eliminar este registro?')"></a>
         </td>
 
         <td class="td-estado" style="width:10px">
@@ -126,7 +126,6 @@
   }
   ?>
 
-  <!-- TODO: mandar datos del select * from al front -->
 
 </body>
 
