@@ -18,7 +18,6 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
       <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
@@ -64,81 +63,81 @@
       $estadoDesc = $row["descripcion"];
       $estadoCodMat = $row["cod_material"];
       $stock = $row["stock"];
-  ?>
-  <div class="main_table-ejemplar">
-    <table class="table-ejemplar">
+      ?>
+      <div class="main_table-ejemplar">
+        <table class="table-ejemplar">
 
 
-      <tr class="tr-ejemplar">
-        <th class="th-ejemplar">ID estado</th>
-        <th class="th-ejemplar">Descripcion</th>
-        <th class="th-ejemplar">Codigo material</th>
-        <th class="th-ejemplar">Stock</th>
-      </tr>
-      <tr class="tr-ejemplar">
-        <td class="td-ejemplar" style="width:10px">
-          <?php echo $idEstado ?>
-        </td>
-        <td class="td-ejemplar" style="width:300px">
-          <?php echo $estadoDesc ?>
-        </td>
-        <td class="td-ejemplar" style="width:10px">
-          <?php echo $estadoCodMat ?>
-        </td>
-        <td class="td-ejemplar" style="width:10px">
-          <?php echo $stock ?>
-        </td>
-        <td class="td-ejemplar" style="width:10px">
-          <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
-            name="btn-libroDelete" onclick="return confirm('¿Estas seguro de eliminar este registro?')"></a>
-        </td>
-        <td class="td-ejemplar" style="width:10px">
-          <a href="../editEjem.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-pencil btn-libroEdit"
-            id="btn-libroEdit" name="btn-libroEdit"></a>
-        </td>
-      </tr>
-    </table>
-    <style>
-      .main_table-ejemplar {
-        width: 100%;
-      }
+          <tr class="tr-ejemplar">
+            <th class="th-ejemplar">ID estado</th>
+            <th class="th-ejemplar">Descripcion</th>
+            <th class="th-ejemplar">Codigo material</th>
+            <th class="th-ejemplar">Stock</th>
+          </tr>
+          <tr class="tr-ejemplar">
+            <td class="td-ejemplar" style="width:10px">
+              <?php echo $idEstado ?>
+            </td>
+            <td class="td-ejemplar" style="width:300px">
+              <?php echo $estadoDesc ?>
+            </td>
+            <td class="td-ejemplar" style="width:10px">
+              <?php echo $estadoCodMat ?>
+            </td>
+            <td class="td-ejemplar" style="width:10px">
+              <?php echo $stock ?>
+            </td>
+            <td class="td-ejemplar" style="width:10px">
+              <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
+                name="btn-libroDelete" onclick="return confirm('¿Estas seguro de eliminar este registro?')"></a>
+            </td>
+            <td class="td-ejemplar" style="width:10px">
+              <a href="../editEjem.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-pencil btn-libroEdit"
+                id="btn-libroEdit" name="btn-libroEdit"></a>
+            </td>
+          </tr>
+        </table>
+        <style>
+          .main_table-ejemplar {
+            width: 100%;
+          }
 
-      .table-ejemplar,
-      .tr-ejemplar,
-      .th-ejemplar,
-      .td-ejemplar {
-        border-collapse: collapse;
-        border: 1px rgba(10, 10, 10, .4)solid;
-
-
-      }
-
-      .table-ejemplar,
-      .th-ejemplar,
-      .td-ejemplar {
-        text-align: center;
-      }
-
-      .table-ejemplar {
-        margin: 0 auto;
-        width: 95%;
-      }
+          .table-ejemplar,
+          .tr-ejemplar,
+          .th-ejemplar,
+          .td-ejemplar {
+            border-collapse: collapse;
+            border: 1px rgba(10, 10, 10, .4)solid;
 
 
-      . td button .btn-EjemplarDelete:hover {
-        background-color: red;
-      }
+          }
 
-      .td-ejemplar {
-        background-color: rgb(77, 245, 241);
-      }
-    </style>
-  </div>
+          .table-ejemplar,
+          .th-ejemplar,
+          .td-ejemplar {
+            text-align: center;
+          }
+
+          .table-ejemplar {
+            margin: 0 auto;
+            width: 95%;
+          }
+
+
+          . td button .btn-EjemplarDelete:hover {
+            background-color: red;
+          }
+
+          .td-ejemplar {
+            background-color: rgb(77, 245, 241);
+          }
+        </style>
+      </div>
 
 
 
 
-  <?php
+      <?php
     }
   }
 

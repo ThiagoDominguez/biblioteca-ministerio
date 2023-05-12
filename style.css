@@ -176,13 +176,59 @@ form label {
 }
 
 .btn-libroDelete:hover {
-  background-color: red;
+  color: red;
 }
 
 .btn-libroEdit:hover {
-  background-color: green;
+  color: green;
 }
 
 .td-libro {
+  background-color: rgb(77, 245, 241);
+}
+
+.main_table-catalogo {
+  width: 100%;
+}
+
+.table-catalogo,
+.tr-catalogo,
+.th-catalogo,
+.td-catalogo {
+  border-collapse: collapse;
+  border: 1px rgba(10, 10, 10, 0.4) solid;
+}
+
+.table-catalogo,
+.th-catalogo,
+.td-catalogo {
+  text-align: center;
+}
+
+.table-catalogo {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.btn-catalogoDelete,
+.btn-catalogoEdit {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-catalogoDelete:hover {
+  background-color: red;
+}
+
+.btn-catalogoEdit:hover {
+  background-color: green;
+}
+
+.td-catalogo {
   background-color: rgb(77, 245, 241);
 }

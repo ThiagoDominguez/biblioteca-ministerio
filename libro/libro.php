@@ -18,17 +18,25 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
       <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a class="header_nav--active" href="libro.php"><i class="fa fa-book"></i> Libro</a>
       <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
       <a href="../estado/estado.php"><i class="fa fa-exclamation-circle"></i> Estado</a>
-      <a href="../socio/socio.html"><i class="fa fa-user-plus"></i> Socio</a>
+      <a href="../socio/socio.php"><i class="fa fa-user-plus"></i> Socio</a>
       <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
       <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
   </header>
+  <?php
+  if (isset($_GET["success"])) {
+    ?>
+    <p class="success-registro">
+      <?php echo $_GET["success"] ?>
+    </p>
+    <?php
+  }
+  ?>
   <main class="containerPrincipal">
     <form class="containerPrincipal_form" method="post" id="form_libro">
       <label for="">Numero de inventario</label><br />
@@ -69,96 +77,96 @@
       $autorLibro = $row["iniciales_autor"];
       $codInventario = $row["cod_inventario"];
       $codMat = $row["cod_material"];
-  ?>
-  <div class="main_table-libro">
-    <table class="table-libro">
-      <tr class="tr-libro">
-        <th class="th-libro">Numero de inventario</th>
-        <th class="th-libro">Titulo</th>
-        <th class="th-libro">Autor</th>
-        <th class="th-libro">Codigo Inventario</th>
-        <th class="th-libro">Codigo Material</th>
-      </tr>
-      <tr class="tr-libro">
-        <td class="td-libro" style="width:10px ;">
-          <?php echo $numInv ?>
-        </td>
-        <td class="td-libro" style="width:200px">
-          <?php echo $tituloLibro ?>
-        </td>
-        <td class="td-libro" style="width:200px">
-          <?php echo $autorLibro ?>
-        </td>
-        <td class="td-libro" style="width:10px">
-          <?php echo $codInventario ?>
-        </td>
-        <td class="td-libro" style="width:10px">
-          <?php echo $codMat ?>
-        </td>
-        <td class="td-libro" style="width:10px">
-          <a href="delete.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-ban btn-libroDelete"
-            id="btn-libroDelete" name="btn-libroDelete"
-            onclick="return  confirm('¿Estas seguro de eliminar este registro?')"></a>
-        </td>
-        <td class="td-libro" style="width:10px">
-          <a href="../editLib.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-pencil btn-libroEdit"
-            id="btn-libroEdit" name="btn-libroEdit"></a>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <style>
-    .main_table-libro {
-      width: 100%;
-    }
+      ?>
+      <div class="main_table-libro">
+        <table class="table-libro">
+          <tr class="tr-libro">
+            <th class="th-libro">Numero de inventario</th>
+            <th class="th-libro">Titulo</th>
+            <th class="th-libro">Autor</th>
+            <th class="th-libro">Codigo Inventario</th>
+            <th class="th-libro">Codigo Material</th>
+          </tr>
+          <tr class="tr-libro">
+            <td class="td-libro" style="width:10px ;">
+              <?php echo $numInv ?>
+            </td>
+            <td class="td-libro" style="width:200px">
+              <?php echo $tituloLibro ?>
+            </td>
+            <td class="td-libro" style="width:200px">
+              <?php echo $autorLibro ?>
+            </td>
+            <td class="td-libro" style="width:10px">
+              <?php echo $codInventario ?>
+            </td>
+            <td class="td-libro" style="width:10px">
+              <?php echo $codMat ?>
+            </td>
+            <td class="td-libro" style="width:10px">
+              <a href="delete.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-ban btn-libroDelete"
+                id="btn-libroDelete" name="btn-libroDelete"
+                onclick="return  confirm('¿Estas seguro de eliminar este registro?')"></a>
+            </td>
+            <td class="td-libro" style="width:10px">
+              <a href="../editLib.php?id=<?php echo $row["num_inventario"] ?>" class="fa fa-pencil btn-libroEdit"
+                id="btn-libroEdit" name="btn-libroEdit"></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <style>
+        .main_table-libro {
+          width: 100%;
+        }
 
-    .table-libro,
-    .tr-libro,
-    .th-libro,
-    .td-libro {
-      border-collapse: collapse;
-      border: 1px rgba(10, 10, 10, .4)solid;
-
-
-    }
-
-    .table-libro,
-    .th-libro,
-    .td-libro {
-      text-align: center;
-    }
-
-    .table-libro {
-      margin: 0 auto;
-      width: 95%;
-    }
+        .table-libro,
+        .tr-libro,
+        .th-libro,
+        .td-libro {
+          border-collapse: collapse;
+          border: 1px rgba(10, 10, 10, .4)solid;
 
 
-    .btn-libroDelete,
-    .btn-libroEdit {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      margin: 0;
-      text-decoration: none;
-      color: black;
-    }
+        }
 
-    .btn-libroDelete:hover {
-      background-color: red;
+        .table-libro,
+        .th-libro,
+        .td-libro {
+          text-align: center;
+        }
 
-    }
+        .table-libro {
+          margin: 0 auto;
+          width: 95%;
+        }
 
-    .btn-libroEdit:hover {
-      background-color: green;
-    }
 
-    .td-libro {
-      background-color: rgb(77, 245, 241);
-    }
-  </style>
-  <?php
+        .btn-libroDelete,
+        .btn-libroEdit {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          margin: 0;
+          text-decoration: none;
+          color: black;
+        }
+
+        .btn-libroDelete:hover {
+          background-color: red;
+
+        }
+
+        .btn-libroEdit:hover {
+          background-color: green;
+        }
+
+        .td-libro {
+          background-color: rgb(77, 245, 241);
+        }
+      </style>
+      <?php
     }
   }
 

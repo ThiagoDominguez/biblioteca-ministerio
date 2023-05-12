@@ -20,6 +20,7 @@ $query = mysqli_query($connect, $sqlEdit);
 
 if ($query) {
   header("Location:material.php");
+  header("Location:material.php?success= Registro editado ID:$id");
 }
 
 ?>

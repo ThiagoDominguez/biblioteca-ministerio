@@ -7,7 +7,7 @@ $pass = "2001";
 $connect = mysqli_connect($hostname, $nombreUsuario, $pass, $bd);
 
 
-$id = $_POST["id"];
+// $id = $_POST["id"];
 $numInventario = $_POST["inp_libro-numeroInventario"];
 $titulo = $_POST["inp_libro-titulo"];
 $id = $_POST["id"];
@@ -23,6 +23,7 @@ $query = mysqli_query($connect, $sqlEdit);
 
 if ($query) {
   header("Location:libro.php");
+  header("Location:libro.php?success= Registro editado ID:$numInventario");
 }
 
 ?>

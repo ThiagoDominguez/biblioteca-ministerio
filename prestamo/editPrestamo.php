@@ -23,7 +23,7 @@ $query = mysqli_query($connect, $sqlEdit);
 
 if ($query) {
   header("Location:prestamo.php");
-  header("Location:prestamo.php?success= Registro editado, ID: $id");
+  header("Location:prestamo.php?success= Registro editado ID: $id");
 
 
 

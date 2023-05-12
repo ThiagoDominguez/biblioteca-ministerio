@@ -32,13 +32,13 @@ $fila = mysqli_fetch_array($queryEdit);
 </head>
 
 <body>
-  <header class="header">
+  <!-- <header class="header">
 
     <img class="header_img" src="./assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
 
 
     <nav class="header_nav">
-      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
+      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
       <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a class="header_nav--active" href="material.php"><i class="fa fa-list"></i> Material</a>
       <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
@@ -48,7 +48,7 @@ $fila = mysqli_fetch_array($queryEdit);
       <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
       <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
-  </header>
+  </header> -->
   <main class="containerPrincipal">
     <form class="containerPrincipal_form" method="post" id="form_material" action="./material/editMaterial.php">
       <label for="">ID material</label><br />

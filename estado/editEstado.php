@@ -20,6 +20,7 @@ $query = mysqli_query($connect, $sqlEdit);
 
 if ($query) {
   header("Location:estado.php");
+  header("Location:estado.php?success= Registro editado ID:$id");
 }
 
 ?>

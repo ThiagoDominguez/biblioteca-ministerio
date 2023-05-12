@@ -30,22 +30,22 @@ $fila = mysqli_fetch_array($queryEdit);
 </head>
 
 <body>
-  <header class="header">
+  <!-- <header class="header">
     <a href="../index.html">
       <img class="header_img" src="./assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
-      <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
-      <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
-      <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
-      <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
-      <a href="../estado/estado.php"><i class="fa fa-exclamation-circle"></i> Estado</a>
-      <a class="header_nav--active" href="../socio/socio.php"><i class="fa fa-user-plus"></i> Socio</a>
-      <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
-      <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
-    </nav>
-  </header>
+      <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a>
+  <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
+  <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
+  <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
+  <a href="../ejemplar/ejemplar.php"><i class="fa fa-save"></i> Ejemplar</a>
+  <a href="../estado/estado.php"><i class="fa fa-exclamation-circle"></i> Estado</a>
+  <a class="header_nav--active" href="../socio/socio.php"><i class="fa fa-user-plus"></i> Socio</a>
+  <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
+  <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
+  </nav>
+  </header> -->
   <main class="containerPrincipal">
     <form class="containerPrincipal_form" id="form_socio" method="post" action="./socio/editSocio.php">
       <label for="">ID del Socio</label><br />

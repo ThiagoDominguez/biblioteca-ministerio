@@ -30,6 +30,16 @@
       <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
   </header>
+
+  <?php
+  if (isset($_GET["success"])) {
+    ?>
+    <p class="success-registro">
+      <?php echo $_GET["success"] ?>
+    </p>
+    <?php
+  }
+  ?>
   <main class="containerPrincipal">
     <form class="containerPrincipal_form" id="form_estado" method="post">
       <label for="">ID Estado</label><br />
@@ -73,54 +83,54 @@
       $codMatEstado = $row["cod_material"];
       // $btnEstadoDelete = $_POST["btn-EstadoDelete"];
   
-  ?>
-  <div style="width:100%; ">
-    <style>
-      td:hover {
-        background-color: red;
-      }
-    </style>
-    <table class="table-estado"
-      style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid;width:90%;text-align: center;margin:0 auto;">
-      <tr style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid;">
-        <th
-          style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;border-spacing: 10px ;">
-          ID estado</th>
-        <th
-          style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;border-spacing: 10px ;">
-          Descripcion</th>
-        <th
-          style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;border-spacing: 10px ;">
-          Codigo material
-        </th>
-      </tr>
-      <tr style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid">
-        <td
-          style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center; background-color: rgb(77, 245, 241); ">
-          <?php echo $idEstado; ?>
-        </td>
-        <td
-          style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;  background-color: rgb(77, 245, 241); ">
-          <?php echo $descEstado; ?>
-        </td>
-        <td
-          style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;  background-color: rgb(77, 245, 241);">
-          <?php echo $codMatEstado; ?>
-        </td>
-        <td class="td-estado" style="width:10px">
-          <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
-            name="btn-libroDelete" onclick="return confirm('¿Estas seguro de eliminar este registro?')"></a>
-        </td>
+      ?>
+      <div style="width:100%; ">
+        <style>
+          td:hover {
+            background-color: red;
+          }
+        </style>
+        <table class="table-estado"
+          style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid;width:90%;text-align: center;margin:0 auto;">
+          <tr style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid;">
+            <th
+              style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;border-spacing: 10px ;">
+              ID estado</th>
+            <th
+              style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;border-spacing: 10px ;">
+              Descripcion</th>
+            <th
+              style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;border-spacing: 10px ;">
+              Codigo material
+            </th>
+          </tr>
+          <tr style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid">
+            <td
+              style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center; background-color: rgb(77, 245, 241); ">
+              <?php echo $idEstado; ?>
+            </td>
+            <td
+              style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;  background-color: rgb(77, 245, 241); ">
+              <?php echo $descEstado; ?>
+            </td>
+            <td
+              style="border-collapse: collapse;border:1px rgba(10,10,10,.4) solid; text-align: center;  background-color: rgb(77, 245, 241);">
+              <?php echo $codMatEstado; ?>
+            </td>
+            <td class="td-estado" style="width:10px">
+              <a href="delete.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-ban btn-libroDelete" id="btn-libroDelete"
+                name="btn-libroDelete" onclick="return confirm('¿Estas seguro de eliminar este registro?')"></a>
+            </td>
 
-        <td class="td-estado" style="width:10px">
-          <a href="../editEst.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-pencil btn-libroEdit"
-            id="btn-libroEdit" name="btn-libroEdit"></a>
-        </td>
-      </tr>
+            <td class="td-estado" style="width:10px">
+              <a href="../editEst.php?id=<?php echo $row["id_estado"] ?>" class="fa fa-pencil btn-libroEdit"
+                id="btn-libroEdit" name="btn-libroEdit"></a>
+            </td>
+          </tr>
 
-    </table>
-  </div>
-  <?php
+        </table>
+      </div>
+      <?php
 
     }
   }

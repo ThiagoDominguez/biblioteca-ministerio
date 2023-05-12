@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
   <link rel="shortcut icon" href="../assets/libros.png" type="image/x-icon" />
-  <script src="../script.js" defer></script>
+  <script type="module" src="libro.js" defer></script>
   <title>Biblioteca</title>
 </head>
 
@@ -18,7 +18,6 @@
       <img class="header_img" src="../assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
       <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a href="../libro/libro.php"><i class="fa fa-book"></i> Libro</a>
@@ -26,104 +25,142 @@
       <a href="../estado/estado.php"><i class="fa fa-exclamation-circle"></i> Estado</a>
       <a href="../socio/socio.php"><i class="fa fa-user-plus"></i> Socio</a>
       <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
-      <a class="header_nav--active" href="catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
+      <a class="header_nav--active" href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
   </header>
-</body>
-<main class="containerPrincipal">
+  <?php
+  if (isset($_GET["success"])) {
+    ?>
+    <p class="success-registro">
+      <?php echo $_GET["success"] ?>
+    </p>
+    <?php
+  }
+  ?>
+  <main class="containerPrincipal">
+    <!-- <form class="containerPrincipal_form" method="post" id="form_libro">
+      <label for="">Numero de inventario</label><br /> 
+    <input class="containerPrincipal_form--input dni" type="number" name="inp_libro-numeroInventario"
+      placeholder="Numero del inventario" minlength="8" maxlength="8" size="8" id="inp_libro-numeroInventario" /><br />
+    <label for="">Titulo</label><br />
+    <input class="containerPrincipal_form--input" name="inp_libro-titulo" type="text" placeholder=" Titulo del libro"
+      id="inp_libro-titulo" /><br />
+    <label for="">Autor</label><br />
+    <input class="containerPrincipal_form--input" name="inp_libro-autor" type="text" placeholder="Nombre del autor"
+      id="inp_libro-autor" /><br />
+    <label for="">Codigo de inventario</label><br />
+    <input class="containerPrincipal_form--input" type="number" name="inp_libro-codigoInventario"
+      placeholder="Codigo de inventario" id="inp_libro-codigoInventario" /><br />
+    <label for="">Codigo de material</label><br />
+    <input class="containerPrincipal_form--input" type="number" name="inp_libro-codigoMaterial"
+      placeholder="Codigo del material" id="inp_libro-codigoMaterial" /><br />
+    <button id="btn-libro" type="submit" class="containerPrincipal_form--btn">
+      Agregar
+    </button>
+    </form>-->
+  </main>
+  <!-- <div>
+    <p id="return-libro"></p>
+  </div> -->
   <?php
   $bd = "biblioteca";
   $hostname = "localhost";
   $nombreUsuario = "Thiago";
   $pass = "2001";
   $connect = mysqli_connect($hostname, $nombreUsuario, $pass, $bd);
-  $queryLibro = mysqli_query($connect, "SELECT libro.titulo,libro.iniciales_autor FROM libro ");
-  $querySocio = mysqli_query($connect, "SELECT estudiante.dni FROM estudiante");
-  $queryEstado = mysqli_query($connect, "SELECT estado.descripcion FROM estado");
-  $queryEjemplar = mysqli_query($connect, "SELECT ejemplar.stock FROM ejemplar ");
-  if ($queryLibro or $querySocio or $queryEjemplar or $queryEstado) {
-    while ($row = $queryLibro->fetch_array() or $row = $querySocio->fetch_array() or $row = $queryEstado->fetch_all() or $row = $queryEjemplar->fetch_all()) {
-      $tituloLib = $row["titulo"];
-      $autorLib = $row["iniciales_autor"];
-      $dniSoc = $row["estudiante" . "dni"];
-      $descEst = $row["descripcion"];
-      $stockEje = $row["stock"];
+  $query = mysqli_query($connect, "SELECT * FROM libro");
+  if ($query) {
+    while ($row = $query->fetch_array()) {
+      $numInv = $row["num_inventario"];
+      $tituloLibro = $row["titulo"];
+      $autorLibro = $row["iniciales_autor"];
+      $codInventario = $row["cod_inventario"];
+      $codMat = $row["cod_material"];
+      ?>
+      <div class="main_table-libro">
+        <table class="table-libro">
+          <tr class="tr-libro">
+            <!-- <th class="th-libro">Numero de inventario</th> -->
+            <th class="th-libro">Titulo</th>
+            <th class="th-libro">Autor</th>
+            <!-- <th class="th-libro">Codigo Inventario</th> -->
+            <!-- <th class="th-libro">Codigo Material</th> -->
+          </tr>
+          <tr class="tr-libro">
 
-  ?>
-
-  <div class="main_table-catalogo">
-    <tr class="tr-catalogo">
-      <th class="th-catalogo">Socio</th>
-      <th class="th-catalogo">Titulo</th>
-      <th class="th-catalogo">Autor</th>
-      <th class="th-catalogo">Estado</th>
-      <th class="th-catalogo">Stock</th>
-    </tr>
-    <tr class="tr-catalogo">
-      <td class="td-catalogo">
-        <?php echo $dniSoc ?>
-      </td>
-      <td class="td-catalogo">
-        <?php echo $tituloLib ?>
-      </td>
-      <td class="td-catalogo">
-        <?php echo $autorLib ?>
-      </td>
-      <td class="td-catalogo">
-        <?php echo $descEst ?>
-      </td>
-      <td class="td-catalogo">
-        <?php echo $stockEje ?>
-      </td>
-    </tr>
-  </div>
-  <style>
-    .main_table-catalogo {
-      width: 100%;
-    }
-
-    .table-catalogo,
-    .tr-catalogo,
-    .th-catalogo,
-    .td-catalogo {
-      border-collapse: collapse;
-      border: 1px rgba(10, 10, 10, .4)solid;
+            <td class="td-libro" style="width:200px">
+              <?php echo $tituloLibro ?>
+            </td>
+            <td class="td-libro" style="width:200px">
+              <?php echo $autorLibro ?>
+            </td>
 
 
-    }
+          </tr>
+        </table>
+      </div>
+      <style>
+        .main_table-libro {
+          width: 100%;
+        }
 
-    .table-catalogo,
-    .th-catalogo,
-    .td-catalogo {
-      text-align: center;
-    }
-
-    .table-catalogo {
-      margin: 0 auto;
-      width: 95%;
-    }
-
-
-    . td button .btn-catalogoDelete:hover {
-      background-color: red;
-    }
-
-    .td-catalogo {
-      background-color: rgb(77, 245, 241);
-    }
-  </style>
+        .table-libro,
+        .tr-libro,
+        .th-libro,
+        .td-libro {
+          border-collapse: collapse;
+          border: 1px rgba(10, 10, 10, .4)solid;
 
 
+        }
+
+        .table-libro,
+        .th-libro,
+        .td-libro {
+          text-align: center;
+        }
+
+        .table-libro {
+          margin: 0 auto;
+          width: 95%;
+        }
 
 
+        .btn-libroDelete,
+        .btn-libroEdit {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          margin: 0;
+          text-decoration: none;
+          color: black;
+        }
 
+        .btn-libroDelete:hover {
+          background-color: red;
 
-  <?php
+        }
+
+        .btn-libroEdit:hover {
+          background-color: green;
+        }
+
+        .td-libro {
+          background-color: rgb(77, 245, 241);
+        }
+      </style>
+      <?php
     }
   }
 
 
+
+
+
+
+
   ?>
-</main>
+</body>
 
 </html>

@@ -30,12 +30,11 @@ $fila = mysqli_fetch_array($queryEdit);
 </head>
 
 <body>
-  <header class="header">
+  <!-- <header class="header">
     <a href="../index.html">
       <img class="header_img" src="./assets/ministerio.png" alt="imagen del Ministerio de Educacion Corrientes" />
     </a>
     <nav class="header_nav">
-      <!-- <a href="../usuario/usuario.php"><i class="fa fa-users"></i> Usuario</a> -->
       <a href="../unlogin.php"><i class="	fa fa-sign-out">Cerrar Sesion</i></a>
       <a href="../material/material.php"><i class="fa fa-list"></i> Material</a>
       <a class="header_nav--active" href="libro.php"><i class="fa fa-book"></i> Libro</a>
@@ -45,7 +44,7 @@ $fila = mysqli_fetch_array($queryEdit);
       <a href="../prestamo/prestamo.php"><i class="fa fa-exchange"></i> Prestamo</a>
       <a href="../catalogo/catalogo.php"><i class="fa fa-folder"></i> Catalogo</a>
     </nav>
-  </header>
+  </header> -->
   <main class="containerPrincipal">
     <input type="number" hidden name="id" value="<?php echo $fila["num_inventario"] ?>">
     <form class="containerPrincipal_form" method="post" id="form_libro" action="./libro/editLibro.php">
